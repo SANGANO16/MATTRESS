@@ -1,0 +1,314 @@
+*{
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+  font-family: 'poppins', sans-serif;
+}
+
+.header{
+  background-color: white;
+  position: relative;
+}
+
+.topline{
+    height: 40px;
+    background-color: #2E318E;
+    width: 100%;
+}
+
+.midnav{
+    padding: 2%;
+    display: flex;
+}
+
+
+.search-container {
+  margin-left: 20%;
+  margin-right: 20%;
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+}
+
+.search-input {
+  width: 80%;
+  padding: 12px 20px 12px 45px; /* Extra left padding for the icon */
+  border-radius: 25px; /* Creates the rounded ends */
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #888; /* Grey color for the icon */
+}
+
+/* Styling for when the user hovers or clicks into the bar */
+.search-input {
+  transition: all 0.3s ease; /* Makes the color change smooth */
+}
+
+/* Hover state: changes border color when mouse is over it */
+.search-input:hover {
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px #2E318E;
+}
+
+/* Focus state: changes style when user clicks to type */
+.search-input:focus {
+  border-color: #2E318E; /* Matching the pink from your image */
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px #2E318E;
+  outline: none; /* Removes the default browser blue outline */
+}
+
+/* Optional: Change the icon color when the bar is focused */
+.search-container:focus-within .search-icon {
+  fill: #2E318E;
+}
+
+.bottomnav{
+  padding: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+}
+.bottomnav nav ul{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.bottomnav ul li a{
+  text-transform: capitalize;
+  color: black;
+  font-family: 'poppins', sans-serif;
+}
+
+.linehover {
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  color: #2E318E;
+}
+
+.linehover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: width 0.3s;
+}
+
+.linehover:hover::after {
+  width: 100%;
+}
+
+.content{
+  /* position: relative; */
+}
+.contentmg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+
+.p1{
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.p2{
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.p2 span{
+  color: #2E318E;
+}
+
+.pbanner{
+  padding: 5%;
+}
+.p3 a{
+  /* text-transform:lowercase; */
+  color: white;
+  background: #2E318E;
+  width: 30%;
+  padding: 1%;
+  /* border: none; */
+  border-radius: 10px;
+  margin-left: 32%;
+}
+
+.div3{
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+margin-top: 8%;
+}
+
+.div3 i{
+  transform: scale(2);
+  height: 5vh;
+  width: 5vw;
+  color: #1a1d6e;
+}
+
+.div3 div{
+  width: 20%;
+}
+
+.ibyibanze{
+  margin-top: 2%;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.featured {
+  display: flex;                 
+  justify-content: space-around; 
+  align-items: flex-start;
+  flex-wrap: wrap;             
+  width: 70%;
+  margin-right: auto;
+  margin-left: 10%;
+  
+}
+
+.featured1 {
+  width: 20vw;
+  height: 65vh;
+  flex: 0 0 300px;             
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.featured1 img {
+  width: 90%;            
+  height: auto;                
+  object-fit: cover;        
+  border-radius: 8px;
+}
+.featured1 img:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  border: 2px solid #2E318E;
+}
+
+.featured1 h4 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+  color: #2E318E;
+}
+
+.featured1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.featured1 ul li {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #2E318E;
+}
+
+.buy-btn {
+  background-color: #2E318E;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #1a1d6e;
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.undermat{
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin-top: 4%;
+}
+.undermatp{
+  font-size: 40px;
+  font-weight: bolder;
+
+}
+.undermatp2{
+  font-size: 24px;
+}
+.undermat span{
+  color: #1a1d6e;
+}
+
+.gura{
+  margin-left: 10%;
+  /* width: 90%; */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gura i{
+  color: #1a1d6e;
+  transform: scale(2)
+}
+.gura h2{
+  padding: 4%;
+  font-weight: bolder;
+}
+
+.kungano{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kungano li{
+  padding: 5%;
+}
+
+.kubushobozi{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kubushobozi li{
+  padding: 5%;
+
+}
