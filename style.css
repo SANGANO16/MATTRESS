@@ -116,9 +116,6 @@ body{
   width: 100%;
 }
 
-.content{
-  /* position: relative; */
-}
 .contentmg{
   position: absolute;
   z-index: -1;
