@@ -413,6 +413,7 @@ margin-top: 8%;
     
 }
 .lastdiv{
+  margin-bottom: 2%;
     margin-top: 2%;
     margin-left: 5%;
     /* padding: 5%; */
@@ -507,6 +508,11 @@ margin-top: 8%;
   text-align: center;
   font-size: 0.85rem;
   color: #777;
+}
+
+.footer-middle h4{
+  margin-bottom: 15px;
+  color: #2E318E;
 }
 
 .footer-bottom a {
