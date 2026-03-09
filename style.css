@@ -76,22 +76,27 @@ body{
   fill: #2E318E;
 }
 
-.bottomnav{
+.bottomnav {
   padding: 1%;
-  margin-left: 10%;
-  margin-right: 10%;
-  justify-content: center;
-}
-.bottomnav nav ul{
-  display: flex;
-  justify-content: space-around;
-  
+  margin: 0 10%;
 }
 
-.bottomnav ul li a{
+.bottomnav nav ul {
+  display: flex;               /* horizontal nav */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottomnav ul li {
+  position: relative;          /* important for dropdown positioning */
+}
+
+.bottomnav ul li a {
   text-transform: capitalize;
   color: black;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 15px;
+  display: block;
 }
 
 .linehover {
@@ -113,8 +118,35 @@ body{
 }
 
 .linehover:hover::after {
-  width: 100%;
+  width: auto;
 }
+
+.dropdown {
+  display: none;               /* hidden by default */
+  position: absolute;
+  background-color: #2E318E;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown ul li a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown ul li a:hover {
+  color: orange;
+  background-color: #1a1d6e;
+  transform: translateY(2px);
+}
+
+/* Show dropdown on hover */
+.trigger:hover .dropdown {
+  display: block;
+}
+
 
 .contentmg{
   position: absolute;
@@ -306,14 +338,20 @@ margin-top: 8%;
   font-weight: bolder;
 }
 
+.gura h2:hover{
+  transition: ;
+  text-decoration: underline dotted green;
+}
+
 .kungano{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .kungano li{
-  padding: 5%;
+  padding-right: 5%;
+}
+.kungano li:hover{
+  text-underline-offset: red initial;
 }
 
 .kubushobozi{
@@ -386,7 +424,6 @@ margin-top: 8%;
     font-weight: bolder;
 }
 .helpdiv{
-    
     display: grid;
     grid-template-columns: 2fr 2fr;
 }
