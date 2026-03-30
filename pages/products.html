@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imyenda Ya Matera - Ibicuruzwa Byose</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="topnav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>Imyenda <span>Ya Matera</span></h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="active"><i class="fas fa-home"></i> Ahabanza</a></li>
+                    <li><a href="imyenda.html"><i class="fas fa-bed"></i> Imyenda</a></li>
+                    <li><a href="products.html"><i class="fas fa-tags"></i> Ibicuruzwa</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Twandikire</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-products">
+        <div class="hero-content">
+            <h2>Ibicuruzwa Byose</h2>
+            <p>Hitamo ibyiza kugirango urare neza</p>
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Filter and Search Bar -->
+            <div class="products-toolbar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" placeholder="Shakisha ibicuruzwa...">
+                </div>
+                <div class="filter-options">
+                    <select id="sizeFilter">
+                        <option value="all">Ubunini bwose</option>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="queen">Queen</option>
+                        <option value="king">King</option>
+                    </select>
+                    <select id="priceFilter">
+                        <option value="all">Igiciro cyose</option>
+                        <option value="lowToHigh">Igiciro gito → kinini</option>
+                        <option value="highToLow">Igiciro kinini → gito</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Single Regular -->
+                <div class="product-card" data-category="single" data-price="5000">
+                    <div class="product-badge">Ibyiza</div>
+                    <div class="product-image">
+                        <img src="../images/mattress-single.jpg" alt="Single Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Single+Mattress'">
+                    </div>
+                    <div class="product-details">
+                        <h3>Single (Regular)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">190 x 90 x 8</span>
+                            <span class="size-tag">190 x 90 x 10</span>
+                            <span class="size-tag">190 x 90 x 13</span>
+                            <span class="size-tag">190 x 90 x 15</span>
+                            <span class="size-tag">190 x 90 x 20</span>
+                            <span class="size-tag">190 x 90 x 25</span>
+                            <span class="size-tag">190 x 90 x 30</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">5,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>Matera yo mu rwego rwa mbere (Dodoma quality 1). Ifite ubuziranenge kandi iramba. Igihagararo: 190cm, ubugari: 90cm, uburebure butandukanye. Ikoreshwa mu buryo bwiza ku nzu ndetse no mu matera yo gucumbikira.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Ifite ubuziranenge bwiza</li>
+                                <li><i class="fas fa-check-circle"></i> Iramba kandi ntishushwa</li>
+                                <li><i class="fas fa-check-circle"></i> Yoroshye gusukura</li>
+                                <li><i class="fas fa-check-circle"></i> Igiciro gikwiye</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Double Regular -->
+                <div class="product-card" data-category="double" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-double.jpg" alt="Double Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Double+Mattress'">
+                    </div>
+                    <div class="product-details">
+                        <h3>Double (Regular)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">190 x 120 x 13</span>
+                            <span class="size-tag">190 x 120 x 15</span>
+                            <span class="size-tag">190 x 120 x 20</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>Matera ya Double (Regular) ikwiye abashakisha umwanya uhagije. Ifite ubuziranenge bukomeye, ikozwe mu buryo bugezweho.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Ikwiye abantu babiri</li>
+                                <li><i class="fas fa-check-circle"></i> Ifite uburebure buhagije</li>
+                                <li><i class="fas fa-check-circle"></i> Ikoranwa na spongy nziza</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Double Large -->
+                <div class="product-card" data-category="double" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-double-large.jpg" alt="Double Large Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Double+Large'">
+                    </div>
+                    <div class="product-details">
+                        <h3>Double (Large)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">190 x 140 x 15</span>
+                            <span class="size-tag">190 x 140 x 20</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>Double Large ifite ubugari bunini, ikwiye abantu bakunda umwanya wiyongereye.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queen Large -->
+                <div class="product-card" data-category="queen" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-queen.jpg" alt="Queen Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Queen+Mattress'">
+                    </div>
+                    <div class="product-details">
+                        <h3>Queen (Large)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">190 x 160 x 15</span>
+                            <span class="size-tag">190 x 160 x 20</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>Queen Large ni matera y'icyubahiro, ikwiye abashaka ihumure rikomeye.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queen Super -->
+                <div class="product-card" data-category="queen" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-queen-super.jpg" alt="Queen Super Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Queen+Super'">
+                    </div>
+                    <div class="product-details">
+                        <h3>Queen (Super)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">190 x 180 x 20</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>Queen Super ifite ubugari bunini cyane, ikwiye abashaka matera yagutse.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- King Regular -->
+                <div class="product-card" data-category="king" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-king.jpg" alt="King Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=King+Mattress'">
+                    </div>
+                    <div class="product-details">
+                        <h3>King (Regular)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">200 x 180 x 15</span>
+                            <span class="size-tag">200 x 180 x 20</span>
+                            <span class="size-tag">200 x 180 x 25</span>
+                            <span class="size-tag">200 x 180 x 30</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>King Regular ni matera nini, ikwiye abantu benshi cyangwa abashaka umwanya mugari.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- King Super -->
+                <div class="product-card" data-category="king" data-price="6000">
+                    <div class="product-image">
+                        <img src="../images/mattress-king-super.jpg" alt="King Super Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=King+Super'">
+                    </div>
+                    <div class="product-details">
+                        <h3>King (Super)</h3>
+                        <div class="product-sizes">
+                            <span class="size-tag">200 x 200 x 15</span>
+                            <span class="size-tag">200 x 200 x 20</span>
+                            <span class="size-tag">200 x 200 x 25</span>
+                            <span class="size-tag">200 x 200 x 30</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6,000 RWF</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
+                        </div>
+                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
+                        <div class="product-description hidden">
+                            <h4>Ibisobanuro birambuye</h4>
+                            <p>King Super ni matera minini kurusha ayose, ikwiye abashaka icyumba kinini cyane.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-header">
+                <h2><i class="fas fa-comments"></i> Igitekerezo cyawe</h2>
+                <p>Tubwire iki watekereza ku bicuruzwa byacu</p>
+            </div>
+            <div class="feedback-form">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="customerName">Amazina yawe</label>
+                        <input type="text" id="customerName" placeholder="Andika amazina yawe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Nimero ya telefone</label>
+                        <input type="tel" id="customerPhone" placeholder="078XXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productFeedback">Icyo watekereza ku matera</label>
+                        <select id="productFeedback">
+                            <option value="quality">Ubuziranenge</option>
+                            <option value="price">Igiciro</option>
+                            <option value="delivery">Gutwara</option>
+                            <option value="service">Serivisi</option>
+                            <option value="other">Ibindi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Ubutumwa</label>
+                        <textarea id="feedbackMessage" rows="4" placeholder="Andika igitekerezo cyawe hano..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Igipimo (1-5)</label>
+                        <div class="rating-stars">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+                    <button type="submit" class="btn-submit-feedback"><i class="fas fa-paper-plane"></i> Ohereza igitekerezo</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Imyenda Ya Matera</h3>
+                    <p>Dutanga matera y'ubuziranenge ku giciro gikwiye.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Aho turi</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+                    <p><i class="fas fa-phone"></i> +250 789 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@imyendayamatera.rw</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tukurikire</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imyenda Ya Matera. Uburenganzira bwose bwakirijwe.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../scripts/products.js"></script>
+</body>
+</html>
