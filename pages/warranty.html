@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warranty - MTR Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/date.js" defer></script>
+    <base href="../">
+    
+    <style>
+        .support-header {
+            background: linear-gradient(135deg, #2E318E 0%, #1a1d6e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .support-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .support-header p { font-size: 1.1rem; opacity: 0.9; }
+        .support-content { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+        .warranty-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .warranty-section h2 { color: #2E318E; margin-bottom: 20px; }
+        .warranty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .warranty-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            border-top: 4px solid #2E318E;
+        }
+        .warranty-card i { font-size: 40px; color: #2E318E; margin-bottom: 15px; }
+        .warranty-card h3 { color: #2E318E; margin-bottom: 15px; }
+        .warranty-card .years { font-size: 36px; font-weight: bold; color: #28a745; }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .support-header h1 { font-size: 1.8rem; }
+        }
+    </style>
+    
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+    <!-- Same header -->
+    <div class="header">
+        <div class="topnav"><div class="topline"><p id="date"></p></div></div>
+        <div class="midnav">
+            <div><a href="index.html"><img src="images/logo/MTR LOGO.png" alt="" height="40" width="200"></a></div>
+            <div class="search-container">
+                <svg class="search-icon" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+                <input type="text" placeholder="Mukiriya mwiza urifuza icyi?" class="search-input">
+            </div> 
+            <div class="ficon"><i class="fa-solid fa-user"></i><i class="fa-solid fa-wallet"></i></div>
+        </div>
+        <hr>
+        <div class="bottomnav">
+            <nav>
+                <ul>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubwoko bwa matera</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/Plain.html">Plain Mattress</a></li> 
+                                <li><a href="pages/lalasalama.html">Lala Salama</a></li>  
+                                <li><a href="pages/sweetdream.html">Sweet Dreams(SD)</a></li>
+                                <li><a href="pages/prestige.html">Prestige Quilted(PQ)</a></li>
+                                <li><a href="pages/fivestar.html">Five Star Spring</a></li>
+                                <li><a href="pages/orthomedic.html">Ortho-Medic (OM)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="pages/imyenda.html" class="linehover">Imyenda ya matera</a></li>
+                    <li><a href="pages/pillows.html" class="linehover">Imisego</a></li>
+                    <li><a href="pages/products.html" class="linehover">Ibicuruzwa Byose</a></li>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubufasha</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/quality-guide.html">Uko Wamenya Quality</a></li>
+                                <li><a href="pages/warranty.html">Warranty Dutanga</a></li>
+                                <li><a href="pages/faq.html">Ibibazo Bikunzwe Kwibaza</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="linehover">Aho mwadusanga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="support-header">
+        <h1>Warranty Dutanga</h1>
+        <p>Our warranty commitment to you - Quality guaranteed</p>
+    </div>
+
+    <div class="support-content">
+        <div class="warranty-section">
+            <h2>Warranty Coverage</h2>
+            <p>At MTR Trading, we stand behind the quality of our mattresses. All our products come with a comprehensive warranty to protect your investment.</p>
+            
+            <div class="warranty-grid">
+                <div class="warranty-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h3>Plain Mattress (PF)</h3>
+                    <div class="years">1 Year</div>
+                    <p>Warranty against manufacturing defects</p>
+                </div>
+                <div class="warranty-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h3>Lala Salama (LS)</h3>
+                    <div class="years">3 Years</div>
+                    <p>Warranty against sagging & defects</p>
+                </div>
+                <div class="warranty-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h3>Sweet Dreams (SD)</h3>
+                    <div class="years">12 Years</div>
+                    <p>Extended warranty + spring guarantee</p>
+                </div>
+                <div class="warranty-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h3>Prestige Quilted (PQ)</h3>
+                    <div class="years">12 Years</div>
+                    <p>Premium warranty coverage</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="warranty-section">
+            <h2>What Does Warranty Cover?</h2>
+            <ul class="checklist" style="list-style:none; padding:0;">
+                <li style="padding:8px 0;">✓ Manufacturing defects</li>
+                <li style="padding:8px 0;">✓ Excessive sagging (more than 1.5 inches)</li>
+                <li style="padding:8px 0;">✓ Broken or loose springs (for spring mattresses)</li>
+                <li style="padding:8px 0;">✓ Faulty zippers on removable covers</li>
+                <li style="padding:8px 0;">✓ Deterioration of foam quality</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <i class="fa-solid fa-triangle-exclamation" style="color: #856404;"></i>
+            <strong>What is NOT Covered:</strong>
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Normal wear and tear</li>
+                <li>Stains, burns, or physical damage</li>
+                <li>Discomfort or preference issues</li>
+                <li>Damage from improper use or handling</li>
+                <li>Mattress without original proof of purchase</li>
+            </ul>
+        </div>
+
+        <div class="success-box">
+            <i class="fa-solid fa-hand-holding-heart" style="color: #2e7d32;"></i>
+            <strong>How to Make a Warranty Claim:</strong>
+            <ol style="margin-top: 10px; margin-left: 20px;">
+                <li>Contact us via WhatsApp or phone with your order details</li>
+                <li>Provide photos showing the issue</li>
+                <li>Share your proof of purchase (order ID)</li>
+                <li>Our team will inspect and verify within 48 hours</li>
+                <li>If approved, we will repair or replace your mattress</li>
+            </ol>
+        </div>
+
+        <div class="warranty-section">
+            <h2>Need to Make a Claim?</h2>
+            <p>Contact us immediately if you notice any manufacturing defects:</p>
+            <p><strong>WhatsApp:</strong> +250790702734</p>
+            <p><strong>Email:</strong> sanganojeancluade16@gmail.com</p>
+            <p style="margin-top: 15px;">Please have your Order ID ready when contacting us.</p>
+        </div>
+    </div>
+
+    <!-- Same footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-column"><h3>About</h3><ul><li><a href="#">About Us</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Blog</a></li></ul></div>
+            <div class="footer-column"><h3>Support</h3><ul><li><a href="#">Delivery</a></li><li><a href="#">Returns</a></li><li><a href="#">FAQs</a></li></ul></div>
+            <div class="footer-column"><h3>Sales</h3><ul><li><a href="#">Create Account</a></li><li><a href="#">Factory Outlet</a></li></ul></div>
+        </div>
+        <div class="footer-middle">
+            <div class="social-icons"><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook"></i></div>
+            <div class="payments"><h4>Payment Methods</h4><img src="images/payments/visa.png" alt="Visa"><img src="images/payments/mastercard.png" alt="Mastercard"><img src="images/payments/paypal.png" alt="PayPal"></div>
+            <div class="trustpilot"><p>Trustpilot ★★★★☆ 2,408 reviews</p></div>
+        </div>
+        <div class="footer-bottom"><p>© 2024 MTR Trading Ltd. All rights reserved.</p><p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p></div>
+    </footer>
+
+    <script src="../scripts/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uko Wamenya Quality - MTR Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/date.js" defer></script>
+    <base href="../">
+    
+    <style>
+        /* Additional styles for support pages */
+        .support-header {
+            background: linear-gradient(135deg, #2E318E 0%, #1a1d6e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .support-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .support-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .support-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        
+        .quality-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .quality-section h2 {
+            color: #2E318E;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .quality-section h3 {
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .quality-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .quality-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quality-card i {
+            font-size: 40px;
+            color: #2E318E;
+            margin-bottom: 15px;
+        }
+        
+        .quality-card h4 {
+            color: #2E318E;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .tip-box {
+            background: #e8f5e9;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .support-header h1 { font-size: 1.8rem; }
+            .quality-section h2 { font-size: 1.4rem; }
+            .quality-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+    <!-- Header (same as your pages) -->
+    <div class="header">
+        <div class="topnav">
+            <div class="topline"><p id="date"></p></div>
+        </div>
+
+        <div class="midnav">
+            <div>
+                <a href="index.html"><img src="images/logo/MTR LOGO.png" alt="" height="40" width="200"></a>
+            </div>
+            <div class="search-container">
+                <svg class="search-icon" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+                <input type="text" placeholder="Mukiriya mwiza urifuza icyi?" class="search-input">
+            </div> 
+            <div class="ficon">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+        </div>
+        <hr>
+
+        <div class="bottomnav">
+            <nav>
+                <ul>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubwoko bwa matera</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/Plain.html">Plain Mattress</a></li> 
+                                <li><a href="pages/lalasalama.html">Lala Salama</a></li>  
+                                <li><a href="pages/sweetdream.html">Sweet Dreams(SD)</a></li>
+                                <li><a href="pages/prestige.html">Prestige Quilted(PQ)</a></li>
+                                <li><a href="pages/fivestar.html">Five Star Spring</a></li>
+                                <li><a href="pages/orthomedic.html">Ortho-Medic (OM)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="pages/imyenda.html" class="linehover">Imyenda ya matera</a></li>
+                    <li><a href="pages/pillows.html" class="linehover">Imisego</a></li>
+                    <li><a href="pages/products.html" class="linehover">Ibicuruzwa Byose</a></li>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubufasha</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/quality-guide.html">Uko Wamenya Quality</a></li>
+                                <li><a href="pages/warranty.html">Warranty Dutanga</a></li>
+                                <li><a href="pages/faq.html">Ibibazo Bikunzwe Kwibaza</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="linehover">Aho mwadusanga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="support-header">
+        <h1>Uko Wamenya Quality ya Matera</h1>
+        <p>How to identify a quality mattress - Your complete guide</p>
+    </div>
+
+    <div class="support-content">
+        <div class="quality-section">
+            <h2>What Makes a Quality Mattress?</h2>
+            <p>Before buying a mattress, it's important to know what to look for. Here are the key factors that determine mattress quality.</p>
+            
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fa-solid fa-cube"></i>
+                    <h4>Density</h4>
+                    <p>High density foam (30kg/m³+) lasts longer and provides better support. Low density foam will sag quickly.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-hand"></i>
+                    <h4>Firmness (Ubukomere)</h4>
+                    <p>Choose based on your sleeping position. Side sleepers need softer, back sleepers need firmer.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <h4>Durability (Iramba)</h4>
+                    <p>A quality mattress should last over 12 years. Check warranty period as an indicator.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <h4>Breathability (Umwuka)</h4>
+                    <p>Good air circulation prevents heat buildup and keeps you cool while sleeping.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quality-section">
+            <h2>Quality Checklist</h2>
+            <p>Use this checklist when evaluating a mattress:</p>
+            <ul class="checklist">
+                <li>Check foam density (ask the seller for specifications)</li>
+                <li>Press down on the mattress - it should spring back quickly</li>
+                <li>Look for a removable, washable cover</li>
+                <li>Check the warranty period (minimum 1-2 years for good quality)</li>
+                <li>Feel the edges - they should be firm and supportive</li>
+                <li>Lie down for 5-10 minutes to test comfort</li>
+                <li>Check for any chemical smells (off-gassing)</li>
+                <li>Ask about the spring count for spring mattresses</li>
+            </ul>
+        </div>
+
+        <div class="quality-section">
+            <h2>Mattress Types Comparison</h2>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h4>Foam Mattress</h4>
+                    <p><strong>Pros:</strong> Affordable, good support, quiet<br>
+                    <strong>Cons:</strong> Can retain heat<br>
+                    <strong>Best for:</strong> Budget-conscious buyers</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h4>Spring Mattress</h4>
+                    <p><strong>Pros:</strong> Bouncy, good airflow<br>
+                    <strong>Cons:</strong> Can be noisy, less motion isolation<br>
+                    <strong>Best for:</strong> Couples, hot sleepers</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h4>Orthopaedic Mattress</h4>
+                    <p><strong>Pros:</strong> Excellent back support, firm<br>
+                    <strong>Cons:</strong> Can be too firm for some<br>
+                    <strong>Best for:</strong> Back pain sufferers</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <i class="fa-solid fa-lightbulb" style="font-size: 24px; color: #f39c12;"></i>
+            <strong style="margin-left: 10px;">Pro Tip:</strong>
+            <p style="margin-top: 10px;">Always test a mattress for at least 10 minutes in the store. Lie in your normal sleeping position. A quality mattress should feel comfortable immediately - your body shouldn't have to "adjust" to it.</p>
+        </div>
+
+        <div class="quality-section">
+            <h2>Questions to Ask Before Buying</h2>
+            <ul class="checklist">
+                <li>What is the foam density?</li>
+                <li>How long is the warranty?</li>
+                <li>Is there a trial period?</li>
+                <li>What is the return policy?</li>
+                <li>Is delivery free?</li>
+                <li>What payment methods are accepted?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer (same as your pages) -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">200 Night Mattress Trial</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Customer Reviews</a></li>
+                    <li><a href="#">Warranties</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sales</h3>
+                <ul>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Factory Outlet</a></li>
+                    <li><a href="#">Trade Account</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="payments">
+                <h4>Payment Methods</h4>
+                <img src="images/payments/visa.png" alt="Visa">
+                <img src="images/payments/mastercard.png" alt="Mastercard">
+                <img src="images/payments/paypal.png" alt="PayPal">
+            </div>
+            <div class="trustpilot">
+                <p>Trustpilot ★★★★☆ 2,408 reviews</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 MTR Trading Ltd. All rights reserved.</p>
+            <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/order.js"></script>
+</body>
+</html>

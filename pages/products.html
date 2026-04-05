@@ -1,384 +1,555 @@
 <!DOCTYPE html>
-<html lang="rw">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imyenda Ya Matera - Ibicuruzwa Byose</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>All Products - MTR Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/products.css">
+    <script src="../scripts/date.js" defer></script>
+    <base href="../">
+    
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <nav class="topnav">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="../index.html">
-                        <h1>Imyenda <span>Ya Matera</span></h1>
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="active"><i class="fas fa-home"></i> Ahabanza</a></li>
-                    <li><a href="imyenda.html"><i class="fas fa-bed"></i> Imyenda</a></li>
-                    <li><a href="products.html"><i class="fas fa-tags"></i> Ibicuruzwa</a></li>
-                    <li><a href="contact.html"><i class="fas fa-phone"></i> Twandikire</a></li>
+    <!-- ========== HEADER (SAME AS YOUR OTHER PAGES) ========== -->
+    <div class="header">
+        <div class="topnav">
+            <div class="topline"><p id="date"></p></div>
+        </div>
+
+        <div class="midnav">
+            <div>
+                <a href="index.html"><img src="images/logo/MTR LOGO.png" alt="" height="40" width="200"></a>
+            </div>
+            <div class="search-container">
+                <svg class="search-icon" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+                <input type="text" placeholder="Mukiriya mwiza urifuza icyi?" class="search-input" id="searchInput">
+            </div> 
+            <div class="ficon">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+        </div>
+        <hr>
+
+        <div class="bottomnav">
+            <nav>
+                <ul>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubwoko bwa matera</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/Plain.html">Plain Mattress</a></li> 
+                                <li><a href="pages/lalasalama.html">Lala Salama</a></li>  
+                                <li><a href="pages/sweetdream.html">Sweet Dreams(SD)</a></li>
+                                <li><a href="pages/prestige.html">Prestige Quilted(PQ)</a></li>
+                                <li><a href="pages/fivestar.html">Five Star Spring</a></li>
+                                <li><a href="pages/orthomedic.html">Ortho-Medic (OM)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="pages/imyenda.html" class="linehover">Imyenda ya matera</a></li>
+                    <li><a href="pages/pillows.html" class="linehover">Imisego</a></li>
+                    <li><a href="pages/products.html" class="linehover">Ibicuruzwa Byose</a></li>
+                    <li class="trigger">
+                        <a href="#" class="linehover">Ubufasha</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="pages/quality-guide.html">Uko Wamenya Quality</a></li>
+                                <li><a href="pages/warranty.html">Warranty Dutanga</a></li>
+                                <li><a href="pages/faq.html">Ibibazo Bikunzwe Kwibaza</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="linehover">Aho mwadusanga</a></li>
                 </ul>
-                <div class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-products">
-        <div class="hero-content">
-            <h2>Ibicuruzwa Byose</h2>
-            <p>Hitamo ibyiza kugirango urare neza</p>
+            </nav>
         </div>
-    </section>
+    </div>
 
-    <!-- Main Products Section -->
-    <section class="products-section">
-        <div class="container">
-            <!-- Filter and Search Bar -->
-            <div class="products-toolbar">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="productSearch" placeholder="Shakisha ibicuruzwa...">
-                </div>
-                <div class="filter-options">
-                    <select id="sizeFilter">
-                        <option value="all">Ubunini bwose</option>
-                        <option value="single">Single</option>
-                        <option value="double">Double</option>
-                        <option value="queen">Queen</option>
-                        <option value="king">King</option>
-                    </select>
-                    <select id="priceFilter">
-                        <option value="all">Igiciro cyose</option>
-                        <option value="lowToHigh">Igiciro gito → kinini</option>
-                        <option value="highToLow">Igiciro kinini → gito</option>
-                    </select>
-                </div>
+    <!-- ========== PRODUCTS PAGE CONTENT ========== -->
+    
+        <div>
+            <img class="contentmg" src="images/mattress/banner.png" alt="">
+            <div class="pbanner">
+            <p class="p1">Murakaza Neza Kuri MTR Trading ltd</p>
+            <p class="p2">Uhahe <span>Kucyiranguzo!</span></p>
             </div>
-
-            <!-- Products Grid -->
-            <div class="products-grid" id="productsGrid">
-                <!-- Single Regular -->
-                <div class="product-card" data-category="single" data-price="5000">
-                    <div class="product-badge">Ibyiza</div>
-                    <div class="product-image">
-                        <img src="../images/mattress-single.jpg" alt="Single Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Single+Mattress'">
-                    </div>
-                    <div class="product-details">
-                        <h3>Single (Regular)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">190 x 90 x 8</span>
-                            <span class="size-tag">190 x 90 x 10</span>
-                            <span class="size-tag">190 x 90 x 13</span>
-                            <span class="size-tag">190 x 90 x 15</span>
-                            <span class="size-tag">190 x 90 x 20</span>
-                            <span class="size-tag">190 x 90 x 25</span>
-                            <span class="size-tag">190 x 90 x 30</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">5,000 RWF</span>
-                        </div>
+        </div>
+    
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="filter-group">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="mattress">Mattresses</button>
+            <button class="filter-btn" data-category="covers">Covers</button>
+            <button class="filter-btn" data-category="accessories">Imisego</button>
+        </div>
+        <div class="filter-group">
+            <button class="filter-btn" data-price="all">All Prices</button>
+            <button class="filter-btn" data-price="under50k">Under 50,000 Rwf</button>
+            <button class="filter-btn" data-price="50k-100k">50k - 100k Rwf</button>
+            <button class="filter-btn" data-price="above100k">Above 100k Rwf</button>
+        </div>
+    </div>
+    
+    <div id="productsContainer">
+        <!-- MATTRESSES SECTION -->
+        <div class="category-section" data-category="mattress">
+            <h2 class="category-title">Mattresses / Matera</h2>
+            <div class="products-grid" id="mattressGrid">
+                <!-- Plain Mattress -->
+                <div class="product-card" data-name="Plain Mattress" data-price="34000" data-category="mattress">
+                    <span class="product-badge">Budget Friendly</span>
+                    <img src="images/mattress/F1.webp" alt="Plain Mattress" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Plain Mattress (PF)</h3>
+                        <ul class="product-details">
+                            <li>✓ High Density Foam</li>
+                            <li>✓ Without Cover</li>
+                            <li>✓ Multiple Sizes Available</li>
+                            <li>✓ Best for Guest Rooms</li>
+                        </ul>
+                        <div class="product-price">From 34,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>Matera yo mu rwego rwa mbere (Dodoma quality 1). Ifite ubuziranenge kandi iramba. Igihagararo: 190cm, ubugari: 90cm, uburebure butandukanye. Ikoreshwa mu buryo bwiza ku nzu ndetse no mu matera yo gucumbikira.</p>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Ifite ubuziranenge bwiza</li>
-                                <li><i class="fas fa-check-circle"></i> Iramba kandi ntishushwa</li>
-                                <li><i class="fas fa-check-circle"></i> Yoroshye gusukura</li>
-                                <li><i class="fas fa-check-circle"></i> Igiciro gikwiye</li>
-                            </ul>
+                            <button class="btn-buy" data-product="Plain Mattress" data-price="34000">Yitumize Nonaha!</button>
+                            <a href="pages/Plain.html" class="btn-details">View Details →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Double Regular -->
-                <div class="product-card" data-category="double" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-double.jpg" alt="Double Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Double+Mattress'">
-                    </div>
-                    <div class="product-details">
-                        <h3>Double (Regular)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">190 x 120 x 13</span>
-                            <span class="size-tag">190 x 120 x 15</span>
-                            <span class="size-tag">190 x 120 x 20</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
+                
+                <!-- Lala Salama -->
+                <div class="product-card" data-name="Lala Salama" data-price="30000" data-category="mattress">
+                    <span class="product-badge hot">Popular</span>
+                    <img src="images/mattress/F2.webp" alt="Lala Salama" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Lala Salama (LS)</h3>
+                        <ul class="product-details">
+                            <li>✓ High Density Foam</li>
+                            <li>✓ Removable Cover</li>
+                            <li>✓ Multiple Sizes</li>
+                            <li>✓ Best for Everyday Use</li>
+                        </ul>
+                        <div class="product-price">From 30,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>Matera ya Double (Regular) ikwiye abashakisha umwanya uhagije. Ifite ubuziranenge bukomeye, ikozwe mu buryo bugezweho.</p>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Ikwiye abantu babiri</li>
-                                <li><i class="fas fa-check-circle"></i> Ifite uburebure buhagije</li>
-                                <li><i class="fas fa-check-circle"></i> Ikoranwa na spongy nziza</li>
-                            </ul>
+                            <button class="btn-buy" data-product="Lala Salama" data-price="30000">Yitumize Nonaha!</button>
+                            <a href="pages/lalasalama.html" class="btn-details">View Details →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Double Large -->
-                <div class="product-card" data-category="double" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-double-large.jpg" alt="Double Large Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Double+Large'">
-                    </div>
-                    <div class="product-details">
-                        <h3>Double (Large)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">190 x 140 x 15</span>
-                            <span class="size-tag">190 x 140 x 20</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
+                
+                <!-- Sweet Dreams -->
+                <div class="product-card" data-name="Sweet Dreams" data-price="120000" data-category="mattress">
+                    <span class="product-badge new">Orthopaedic</span>
+                    <img src="images/mattress/F2.webp" alt="Sweet Dreams" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Sweet Dreams (SD)</h3>
+                        <ul class="product-details">
+                            <li>✓ Medium-Firm Feel</li>
+                            <li>✓ Orthopaedic Support</li>
+                            <li>✓ 1000 Springs System</li>
+                            <li>✓ Best for Back Pain</li>
+                        </ul>
+                        <div class="product-price">120,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>Double Large ifite ubugari bunini, ikwiye abantu bakunda umwanya wiyongereye.</p>
+                            <button class="btn-buy" data-product="Sweet Dreams" data-price="120000">Yitumize Nonaha!</button>
+                            <a href="pages/sweetdream.html" class="btn-details">View Details →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Queen Large -->
-                <div class="product-card" data-category="queen" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-queen.jpg" alt="Queen Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Queen+Mattress'">
-                    </div>
-                    <div class="product-details">
-                        <h3>Queen (Large)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">190 x 160 x 15</span>
-                            <span class="size-tag">190 x 160 x 20</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
+                
+                <!-- Prestige Quilted -->
+                <div class="product-card" data-name="Prestige Quilted" data-price="150000" data-category="mattress">
+                    <span class="product-badge hot">Premium</span>
+                    <img src="images/mattress/F1.webp" alt="Prestige" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Prestige Quilted (PQ)</h3>
+                        <ul class="product-details">
+                            <li>✓ Firm / Medium Options</li>
+                            <li>✓ Coolmax Fabric</li>
+                            <li>✓ Removable Cover</li>
+                            <li>✓ Best for Luxury</li>
+                        </ul>
+                        <div class="product-price">150,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>Queen Large ni matera y'icyubahiro, ikwiye abashaka ihumure rikomeye.</p>
+                            <button class="btn-buy" data-product="Prestige Quilted" data-price="150000">Yitumize Nonaha!</button>
+                            <a href="pages/prestige.html" class="btn-details">View Details →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Queen Super -->
-                <div class="product-card" data-category="queen" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-queen-super.jpg" alt="Queen Super Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=Queen+Super'">
-                    </div>
-                    <div class="product-details">
-                        <h3>Queen (Super)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">190 x 180 x 20</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
+                
+                <!-- Five Star Spring -->
+                <div class="product-card" data-name="Five Star Spring" data-price="250000" data-category="mattress">
+                    <span class="product-badge new">Luxury</span>
+                    <img src="images/mattress/F3.webp" alt="Five Star" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Five Star Spring</h3>
+                        <ul class="product-details">
+                            <li>✓ Pocket Spring Technology</li>
+                            <li>✓ Motion Isolation</li>
+                            <li>✓ Luxury Comfort</li>
+                            <li>✓ Best for Couples</li>
+                        </ul>
+                        <div class="product-price">250,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>Queen Super ifite ubugari bunini cyane, ikwiye abashaka matera yagutse.</p>
+                            <button class="btn-buy" data-product="Five Star Spring" data-price="250000">Yitumize Nonaha!</button>
+                            <a href="#" class="btn-details">Coming Soon →</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- King Regular -->
-                <div class="product-card" data-category="king" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-king.jpg" alt="King Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=King+Mattress'">
-                    </div>
-                    <div class="product-details">
-                        <h3>King (Regular)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">200 x 180 x 15</span>
-                            <span class="size-tag">200 x 180 x 20</span>
-                            <span class="size-tag">200 x 180 x 25</span>
-                            <span class="size-tag">200 x 180 x 30</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
+                
+                <!-- Ortho-Medic -->
+                <div class="product-card" data-name="Ortho Medic" data-price="200000" data-category="mattress">
+                    <span class="product-badge">Medical Grade</span>
+                    <img src="images/mattress/F3.webp" alt="Ortho Medic" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Ortho-Medic (OM)</h3>
+                        <ul class="product-details">
+                            <li>✓ Extra Firm Support</li>
+                            <li>✓ Spinal Alignment</li>
+                            <li>✓ Medical Grade Foam</li>
+                            <li>✓ Best for Back Issues</li>
+                        </ul>
+                        <div class="product-price">200,000 Rwf</div>
                         <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>King Regular ni matera nini, ikwiye abantu benshi cyangwa abashaka umwanya mugari.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- King Super -->
-                <div class="product-card" data-category="king" data-price="6000">
-                    <div class="product-image">
-                        <img src="../images/mattress-king-super.jpg" alt="King Super Mattress" onerror="this.src='https://via.placeholder.com/300x200?text=King+Super'">
-                    </div>
-                    <div class="product-details">
-                        <h3>King (Super)</h3>
-                        <div class="product-sizes">
-                            <span class="size-tag">200 x 200 x 15</span>
-                            <span class="size-tag">200 x 200 x 20</span>
-                            <span class="size-tag">200 x 200 x 25</span>
-                            <span class="size-tag">200 x 200 x 30</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">6,000 RWF</span>
-                        </div>
-                        <div class="product-actions">
-                            <div class="quantity-selector">
-                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-                                <input type="number" class="qty-input" value="1" min="1" max="10">
-                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <button class="btn-order"><i class="fas fa-shopping-cart"></i> Tumiza nonaha</button>
-                        </div>
-                        <button class="btn-description" onclick="showProductDescription(this)"><i class="fas fa-info-circle"></i> Ibisobanuro</button>
-                        <div class="product-description hidden">
-                            <h4>Ibisobanuro birambuye</h4>
-                            <p>King Super ni matera minini kurusha ayose, ikwiye abashaka icyumba kinini cyane.</p>
+                            <button class="btn-buy" data-product="Ortho Medic" data-price="200000">Yitumize Nonaha!</button>
+                            <a href="#" class="btn-details">Coming Soon →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Feedback Section -->
-    <section class="feedback-section">
-        <div class="container">
-            <div class="feedback-header">
-                <h2><i class="fas fa-comments"></i> Igitekerezo cyawe</h2>
-                <p>Tubwire iki watekereza ku bicuruzwa byacu</p>
-            </div>
-            <div class="feedback-form">
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="customerName">Amazina yawe</label>
-                        <input type="text" id="customerName" placeholder="Andika amazina yawe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="customerPhone">Nimero ya telefone</label>
-                        <input type="tel" id="customerPhone" placeholder="078XXXXXXX" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="productFeedback">Icyo watekereza ku matera</label>
-                        <select id="productFeedback">
-                            <option value="quality">Ubuziranenge</option>
-                            <option value="price">Igiciro</option>
-                            <option value="delivery">Gutwara</option>
-                            <option value="service">Serivisi</option>
-                            <option value="other">Ibindi</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="feedbackMessage">Ubutumwa</label>
-                        <textarea id="feedbackMessage" rows="4" placeholder="Andika igitekerezo cyawe hano..." required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="rating">Igipimo (1-5)</label>
-                        <div class="rating-stars">
-                            <i class="far fa-star" data-rating="1"></i>
-                            <i class="far fa-star" data-rating="2"></i>
-                            <i class="far fa-star" data-rating="3"></i>
-                            <i class="far fa-star" data-rating="4"></i>
-                            <i class="far fa-star" data-rating="5"></i>
+        
+        <!-- COVERS SECTION (Imyenda) -->
+        <div class="category-section" data-category="covers">
+            <h2 class="category-title">Imyenda ya Matera / Mattress Covers</h2>
+            <div class="products-grid" id="coversGrid">
+                <div class="product-card" data-name="Mattress Cover Single" data-price="5000" data-category="covers">
+                    <img src="images/imyendayamatera/Slide-1.avif" alt="Single Cover" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Single Mattress Cover</h3>
+                        <ul class="product-details">
+                            <li>✓ 190 x 90 cm</li>
+                            <li>✓ Multiple Thickness Options</li>
+                            <li>✓ Breathable Fabric</li>
+                        </ul>
+                        <div class="product-price">From 5,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Single Mattress Cover" data-price="5000">Yitumize Nonaha!</button>
+                            <a href="pages/imyenda.html" class="btn-details">View Details →</a>
                         </div>
-                        <input type="hidden" id="ratingValue" value="0">
                     </div>
-                    <button type="submit" class="btn-submit-feedback"><i class="fas fa-paper-plane"></i> Ohereza igitekerezo</button>
-                </form>
+                </div>
+                
+                <div class="product-card" data-name="Mattress Cover Double" data-price="6000" data-category="covers">
+                    <img src="images/imyendayamatera/Slide2.avif" alt="Double Cover" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Double Mattress Cover</h3>
+                        <ul class="product-details">
+                            <li>✓ 190 x 120 cm</li>
+                            <li>✓ Elasticated Corners</li>
+                            <li>✓ Machine Washable</li>
+                        </ul>
+                        <div class="product-price">From 6,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Double Mattress Cover" data-price="6000">Yitumize Nonaha!</button>
+                            <a href="pages/imyenda.html" class="btn-details">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-name="Mattress Cover Queen" data-price="6000" data-category="covers">
+                    <img src="images/imyendayamatera/slide4.webp" alt="Queen Cover" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Queen Mattress Cover</h3>
+                        <ul class="product-details">
+                            <li>✓ 190 x 160 cm</li>
+                            <li>✓ Water Resistant</li>
+                            <li>✓ Protects from Stains</li>
+                        </ul>
+                        <div class="product-price">From 6,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Queen Mattress Cover" data-price="6000">Yitumize Nonaha!</button>
+                            <a href="pages/imyenda.html" class="btn-details">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-name="Mattress Cover King" data-price="6000" data-category="covers">
+                    <img src="images/imyendayamatera/slide6.webp" alt="King Cover" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">King Mattress Cover</h3>
+                        <ul class="product-details">
+                            <li>✓ 200 x 180 cm</li>
+                            <li>✓ Deep Pocket Design</li>
+                            <li>✓ Premium Quality</li>
+                        </ul>
+                        <div class="product-price">From 6,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="King Mattress Cover" data-price="6000">Yitumize Nonaha!</button>
+                            <a href="pages/imyenda.html" class="btn-details">View Details →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <!-- ACCESSORIES SECTION -->
+        <div class="category-section" data-category="accessories">
+            <h2 class="category-title">Imisego</h2>
+            <div class="products-grid" id="accessoriesGrid">
+                <div class="product-card" data-name="Memory Foam Topper" data-price="45000" data-category="accessories">
+                    <img src="images/pillows/pillow9.jpg" alt="Mattress Topper" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Mattress Topper</h3>
+                        <ul class="product-details">
+                            <li>✓ 5cm Memory Foam</li>
+                            <li>✓ Adds Softness</li>
+                            <li>✓ Extends Mattress Life</li>
+                        </ul>
+                        <div class="product-price">45,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Mattress Topper" data-price="45000">Yitumize Nonaha!</button>
+                            <a href="pages/pillows.html" class="btn-details">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-name="Pillow" data-price="15000" data-category="accessories">
+                    <img src="images/pillows/pillow8.jpg" alt="Pillow" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Comfort Pillow</h3>
+                        <ul class="product-details">
+                            <li>✓ Orthopedic Support</li>
+                            <li>✓ Breathable Cover</li>
+                            <li>✓ Set of 2 Available</li>
+                        </ul>
+                        <div class="product-price">15,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Comfort Pillow" data-price="15000">Yitumize Nonaha!</button>
+                            <a href="pages/pillows.html" class="btn-details">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Footer -->
+                <div class="product-card" data-name="Memory Foam Topper" data-price="45000" data-category="accessories">
+                    <img src="images/pillows/pillow7.jpg" alt="Mattress Topper" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Mattress Topper</h3>
+                        <ul class="product-details">
+                            <li>✓ 5cm Memory Foam</li>
+                            <li>✓ Adds Softness</li>
+                            <li>✓ Extends Mattress Life</li>
+                        </ul>
+                        <div class="product-price">45,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Mattress Topper" data-price="45000">Yitumize Nonaha!</button>
+                            <a href="pages/pillows.html" class="btn-details">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-name="Pillow" data-price="15000" data-category="accessories">
+                    <img src="images/pillows/pillow6.jpg" alt="Pillow" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Comfort Pillow</h3>
+                        <ul class="product-details">
+                            <li>✓ Orthopedic Support</li>
+                            <li>✓ Breathable Cover</li>
+                            <li>✓ Set of 2 Available</li>
+                        </ul>
+                        <div class="product-price">15,000 Rwf</div>
+                        <div class="product-actions">
+                            <button class="btn-buy" data-product="Comfort Pillow" data-price="15000">Yitumize Nonaha!</button>
+                            <a href="pages/pillows.html" class="btn-details">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="noResults" class="no-results" style="display: none;">
+        <i class="fa-solid fa-search" style="font-size: 50px; color: #ccc;"></i>
+        <h3>No products found</h3>
+        <p>Try adjusting your search or filter criteria</p>
+    </div>
+
+    <!-- ========== FOOTER (SAME AS YOUR OTHER PAGES) ========== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Imyenda Ya Matera</h3>
-                    <p>Dutanga matera y'ubuziranenge ku giciro gikwiye.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Aho turi</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
-                    <p><i class="fas fa-phone"></i> +250 789 123 456</p>
-                    <p><i class="fas fa-envelope"></i> info@imyendayamatera.rw</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Tukurikire</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">200 Night Mattress Trial</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Imyenda Ya Matera. Uburenganzira bwose bwakirijwe.</p>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Customer Reviews</a></li>
+                    <li><a href="#">Warranties</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
             </div>
+
+            <div class="footer-column">
+                <h3>Sales</h3>
+                <ul>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Factory Outlet</a></li>
+                    <li><a href="#">Trade Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="payments">
+                <h4>Payment Methods</h4>
+                <img src="images/payments/visa.png" alt="Visa">
+                <img src="images/payments/mastercard.png" alt="Mastercard">
+                <img src="images/payments/paypal.png" alt="PayPal">
+            </div>
+            <div class="trustpilot">
+                <p>Trustpilot ★★★★☆ 2,408 reviews</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 MTR Trading Ltd. All rights reserved.</p>
+            <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="../scripts/products.js"></script>
+    <!-- WhatsApp Order System -->
+    <script src="../scripts/order.js"></script>
+    
+    <!-- Products Page Specific JavaScript -->
+    <script>
+        // Filter and search functionality
+        const searchInput = document.getElementById('searchInput');
+        let currentCategory = 'all';
+        let currentPrice = 'all';
+        
+        // Get all filter buttons
+        const categoryBtns = document.querySelectorAll('[data-category]');
+        const priceBtns = document.querySelectorAll('[data-price]');
+        const productCards = document.querySelectorAll('.product-card');
+        const categorySections = document.querySelectorAll('.category-section');
+        
+        // Category filter
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                filterProducts();
+            });
+        });
+        
+        // Price filter
+        priceBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                priceBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPrice = btn.dataset.price;
+                filterProducts();
+            });
+        });
+        
+        // Search filter
+        if (searchInput) {
+            searchInput.addEventListener('input', filterProducts);
+        }
+        
+        function filterProducts() {
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+            let visibleCount = 0;
+            
+            productCards.forEach(card => {
+                const productName = card.dataset.name.toLowerCase();
+                const productPrice = parseInt(card.dataset.price);
+                const productCategory = card.dataset.category;
+                
+                let categoryMatch = currentCategory === 'all' || productCategory === currentCategory;
+                let priceMatch = true;
+                
+                // Price filtering
+                if (currentPrice === 'under50k') {
+                    priceMatch = productPrice < 50000;
+                } else if (currentPrice === '50k-100k') {
+                    priceMatch = productPrice >= 50000 && productPrice <= 100000;
+                } else if (currentPrice === 'above100k') {
+                    priceMatch = productPrice > 100000;
+                }
+                
+                const searchMatch = searchTerm === '' || productName.includes(searchTerm);
+                
+                if (categoryMatch && priceMatch && searchMatch) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide category sections based on visible products
+            categorySections.forEach(section => {
+                const sectionCategory = section.dataset.category;
+                const hasVisibleProducts = Array.from(section.querySelectorAll('.product-card')).some(card => 
+                    card.style.display !== 'none'
+                );
+                
+                if (currentCategory === 'all' || currentCategory === sectionCategory) {
+                    section.style.display = hasVisibleProducts ? '' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+        
+        // Make buy buttons work with existing order system
+        document.querySelectorAll('.btn-buy').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productName = this.dataset.product;
+                const productPrice = this.dataset.price;
+                
+                // Trigger the existing order system
+                if (window.showOrderForm) {
+                    window.showOrderForm({
+                        name: productName,
+                        price: productPrice
+                    });
+                } else {
+                    alert(`Order system loading. Please click again in a moment.\n\nProduct: ${productName}\nPrice: ${productPrice} Rwf`);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
