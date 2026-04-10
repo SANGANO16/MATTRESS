@@ -346,7 +346,7 @@ margin-top: 8%;
 }
 
 .gura h2:hover{
-  transition: ;
+  transition: all 0.3s ease;
   text-decoration: underline dotted green;
 }
 
