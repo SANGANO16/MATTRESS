@@ -1,0 +1,266 @@
+.about-header {
+    background: linear-gradient(135deg, #2E318E 0%, #1a1d6e 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-content h2 {
+    color: #2E318E;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.values-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.values-list li i {
+    color: #28a745;
+    font-size: 1.2rem;
+    width: 25px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.location-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.location-section h2 {
+    color: #2E318E;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info-card i {
+    font-size: 24px;
+    color: #2E318E;
+    width: 40px;
+}
+
+.info-card h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    color: #666;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hours-list li span:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.hours-list li span:last-child {
+    color: #666;
+}
+
+.cta-box {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background: linear-gradient(135deg, #2E318E 0%, #1a1d6e 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.cta-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-primary {
+    background: white;
+    color: #2E318E;
+}
+
+.cta-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cta-btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn-secondary:hover {
+    background: white;
+    color: #2E318E;
+}
+
+@media screen and (max-width: 768px) {
+    .about-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .location-section {
+        padding: 25px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-header {
+        padding: 40px 15px;
+    }
+    
+    .about-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-card i {
+        margin-bottom: 10px;
+    }
+    
+    .hours-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}

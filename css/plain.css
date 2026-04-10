@@ -31,19 +31,18 @@ body{
     display: flex;
 }
 
-
 .search-container {
   margin-left: 20%;
   margin-right: 20%;
   position: relative;
   width: 100%;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 500px;
 }
 
 .search-input {
   width: 80%;
-  padding: 12px 20px 12px 45px; /* Extra left padding for the icon */
-  border-radius: 25px; /* Creates the rounded ends */
+  padding: 12px 20px 12px 45px;
+  border-radius: 25px;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   font-size: 16px;
@@ -55,30 +54,26 @@ body{
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  fill: #888; /* Grey color for the icon */
+  fill: #888;
 }
 
-/* Styling for when the user hovers or clicks into the bar */
 .search-input {
-  transition: all 0.3s ease; /* Makes the color change smooth */
+  transition: all 0.3s ease;
 }
 
-/* Hover state: changes border color when mouse is over it */
 .search-input:hover {
   border-color: #3498db;
   background-color: #ffffff;
   box-shadow: 0 2px 8px #2E318E;
 }
 
-/* Focus state: changes style when user clicks to type */
 .search-input:focus {
-  border-color: #2E318E; /* Matching the pink from your image */
+  border-color: #2E318E;
   background-color: #ffffff;
   box-shadow: 0 4px 12px #2E318E;
-  outline: none; /* Removes the default browser blue outline */
+  outline: none;
 }
 
-/* Optional: Change the icon color when the bar is focused */
 .search-container:focus-within .search-icon {
   fill: #2E318E;
 }
@@ -89,13 +84,13 @@ body{
 }
 
 .bottomnav nav ul {
-  display: flex;               /* horizontal nav */
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .bottomnav ul li {
-  position: relative;          /* important for dropdown positioning */
+  position: relative;
 }
 
 .bottomnav ul li a {
@@ -129,7 +124,7 @@ body{
 }
 
 .dropdown {
-  display: none;               /* hidden by default */
+  display: none;
   position: absolute;
   background-color: #2E318E;
   border-radius: 5px;
@@ -149,18 +144,15 @@ body{
   transform: translateY(2px);
 }
 
-/* Show dropdown on hover */
 .trigger:hover .dropdown {
   display: block;
 }
-
 
 .contentmg{
   position: absolute;
   z-index: -1;
   width: 100%;
 }
-
 
 .p1{
   font-size: 3rem;
@@ -169,7 +161,7 @@ body{
 }
 
 .p2{
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   text-align: center;
 }
@@ -185,12 +177,10 @@ body{
     padding: 5%;
 }
 .p3 a{
-  /* text-transform:lowercase; */
   color: white;
   background: #2E318E;
   width: 30%;
   padding: 1%;
-  /* border: none; */
   border-radius: 10px;
   margin-left: 32%;
 }
@@ -200,7 +190,6 @@ display: flex;
 align-items: center;
 text-align: center;
 justify-content: center;
-/* margin-top: 2%; */
 }
 
 .div3 i{
@@ -223,7 +212,6 @@ justify-content: center;
 .plaindiv{
     box-shadow: #333;
 }
-
 
 .featured {
   display: grid;
@@ -309,7 +297,6 @@ justify-content: center;
   font-size: 16px;
   transition: all 0.3s ease;
   margin: 15px;
-  /* width: calc(100% - 30px); */
 }
 
 .buy-btn:hover {
@@ -317,37 +304,6 @@ justify-content: center;
   transform: scale(1.02);
   box-shadow: 0 5px 15px rgba(26, 29, 110, 0.3);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
   background: #f5f5f5;
@@ -433,66 +389,59 @@ justify-content: center;
   margin: 0 5px;
 }
 
-/* ===== RESPONSIVE DESIGN MEDIA QUERIES ===== */
-/* DO NOT CHANGE ANYTHING ABOVE THIS LINE */
-/* JUST COPY AND PASTE FROM HERE TO THE END OF YOUR FILE */
-
-/* FOR TABLETS (screen width 768px and below) */
 @media screen and (max-width: 768px) {
-    
-    /* Header & Navigation */
+
     .midnav {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .midnav > div:first-child {
         margin-bottom: 10px;
     }
-    
+
     .search-container {
         margin-left: 0;
         margin-right: 0;
         width: 90%;
         max-width: 400px;
     }
-    
+
     .search-input {
         width: 100%;
     }
-    
+
     .bottomnav {
         margin-left: 5%;
         margin-right: 5%;
     }
-    
+
     .bottomnav nav ul {
         flex-direction: column;
         align-items: center;
         gap: 15px;
         padding: 0;
     }
-    
+
     .bottomnav ul li {
         width: 100%;
         text-align: center;
     }
-    
+
     .bottomnav ul li a {
         display: block;
         padding: 10px;
     }
-    
-    /* Banner Section */
+
     .p1 {
         font-size: 2rem;
     }
-    
+
     .p2 {
         font-size: 2.5rem;
     }
-    
+
     .p3 a {
         width: 80%;
         margin-left: 10%;
@@ -500,30 +449,28 @@ justify-content: center;
         display: block;
         padding: 3%;
     }
-    
-    /* Features Section */
+
     .div3 {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .div3 div {
         width: 80%;
         max-width: 300px;
     }
-    
+
     .div3 i {
         width: 8vw;
         height: 5vh;
     }
-    
-    /* Featured Products */
+
     .featured {
         width: 90%;
         margin-left: 5%;
         justify-content: center;
     }
-    
+
     .featured1 {
         width: 80vw;
         height: auto;
@@ -532,140 +479,133 @@ justify-content: center;
         max-width: 350px;
         margin-bottom: 25px;
     }
-    
+
     .featured1 img {
         width: 100%;
     }
-    
-    /* Under Mattress Section */
+
     .undermat {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 20px;
     }
-    
+
     .undermatp {
         font-size: 32px;
     }
-    
+
     .undermatp2 {
         font-size: 20px;
     }
-    
-    /* Size & Budget Sections */
+
     .gura {
         grid-template-columns: 1fr;
         margin-left: 5%;
         margin-right: 5%;
         text-align: center;
     }
-    
+
     .kungano, .kubushobozi {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .kungano li, .kubushobozi li {
         padding: 3%;
         min-width: 80px;
     }
-    
+
     .gura h2 {
         padding: 2%;
         font-size: 22px;
     }
 }
 
-/* FOR MOBILE PHONES (screen width 480px and below) */
 @media screen and (max-width: 480px) {
-    
-    /* Header */
+
     .midnav {
         padding: 5%;
     }
-    
+
     .midnav a img {
         max-width: 150px;
         height: auto;
     }
-    
+
     .search-input {
         font-size: 14px;
         padding: 10px 15px 10px 40px;
     }
-    
+
     .fa-user, .fa-wallet {
         font-size: 18px;
         margin: 0 5px;
     }
-    
+
     .bottomnav {
         padding: 2%;
     }
-    
+
     .bottomnav ul li a {
         font-size: 14px;
     }
-    
-    /* Banner */
+
     .pbanner {
         padding: 8% 3%;
     }
-    
+
     .p1 {
         font-size: 1.5rem;
     }
-    
+
     .p2 {
         font-size: 1.8rem;
     }
-    
+
     .p3 a {
         width: 90%;
         margin-left: 5%;
         padding: 4%;
         font-size: 14px;
     }
-    
-    /* Features */
+
     .div3 {
         margin-top: 15%;
     }
-    
+
     .div3 div {
         width: 90%;
     }
-    
+
     .div3 i {
         width: 12vw;
         height: 5vh;
         transform: scale(1.5);
     }
-    
-    /* Featured Products */
+
     .ibyibanze h1 {
         font-size: 24px;
         text-align: center;
     }
-    
+
     .featured1 {
         width: 95vw;
         flex: 0 0 95%;
         min-height: 500px;
     }
-    
+
     .featured1 h4 {
         font-size: 1.1rem;
     }
-    
+
     .featured1 ul li {
         font-size: 0.9rem;
     }
-    
+
     .price {
         font-size: 1rem;
     }
-    
+
     .buy-btn {
         padding: 12px 20px;
         font-size: 14px;
@@ -673,131 +613,163 @@ justify-content: center;
         margin: 10px auto;
         display: block;
     }
-    
+
     .buy-btn:hover {
         transform: scale(1.05);
     }
-    
-    /* Under Mattress */
+
     .undermat {
         padding: 8% 5%;
     }
-    
+
     .undermatp {
         font-size: 24px;
     }
-    
+
     .undermatp2 {
         font-size: 16px;
     }
-    
-    /* Size & Budget */
+
     .gura {
         margin-left: 2%;
         margin-right: 2%;
     }
-    
+
     .gura h2 {
         font-size: 18px;
         padding: 5%;
     }
-    
+
     .gura i {
         transform: scale(1.5);
     }
-    
+
     .kungano li, .kubushobozi li {
         padding: 2%;
         font-size: 12px;
     }
-    
+
     .kungano i, .kubushobozi i {
         font-size: 20px;
     }
 }
 
-/* FOR VERY SMALL PHONES (screen width 320px and below) */
 @media screen and (max-width: 320px) {
-    
+
     .p1 {
         font-size: 1.2rem;
     }
-    
+
     .p2 {
         font-size: 1.5rem;
     }
-    
+
     .featured1 {
         min-height: 450px;
     }
-    
+
     .featured1 h4 {
         font-size: 1rem;
     }
-    
+
     .price {
         font-size: 0.9rem;
     }
-    
+
     .buy-btn {
         font-size: 12px;
         padding: 10px 15px;
     }
-    
+
     .undermatp {
         font-size: 20px;
     }
-    
+
     .undermatp2 {
         font-size: 14px;
     }
-    
+
     .kungano li, .kubushobozi li {
         min-width: 60px;
         font-size: 10px;
     }
 }
 
-/* FIX FOR HOVER EFFECTS ON TOUCH DEVICES */
 @media (hover: none) and (pointer: coarse) {
     .linehover::after {
         display: none;
     }
-    
+
     .linehover {
         color: #2E318E;
     }
-    
+
     .buy-btn:hover {
         transform: none;
     }
-    
+
     .featured1 img:hover {
         transform: none;
     }
 }
 
-/* LANDSCAPE MODE FIX FOR MOBILE */
 @media screen and (max-width: 900px) and (orientation: landscape) {
     .featured {
         flex-direction: row;
         overflow-x: auto;
         padding: 20px 10px;
     }
-    
+
     .featured1 {
         min-width: 280px;
         margin-right: 20px;
     }
-    
+
     .div3 {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     .div3 div {
         width: 30%;
     }
 }
 
-/* ===== END OF MEDIA QUERIES ===== */
+.pillow-features {
+    list-style: none;
+    padding: 0 15px;
+    margin: 10px 0;
+    flex: 1;
+}
+
+.pillow-features li {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 5px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pillow-features li:before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .pillow-features li {
+        font-size: 0.85rem;
+        padding: 4px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pillow-features li {
+        font-size: 0.8rem;
+        padding: 3px 0;
+    }
+}
